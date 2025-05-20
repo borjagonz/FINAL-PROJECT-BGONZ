@@ -4,7 +4,9 @@
 <template>
   <section id="header">
     <div class="header">
-      <img class="logo-tasky" src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png" alt="">
+      <a href="index.html">
+        <img class="logo-tasky" src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png" alt="">
+      </a>
       <nav class="nav-buttons">
         <ul class="nav-list">
           <li><a class="button-login" href="">Log In</a></li>
@@ -19,33 +21,31 @@
 header {
   max-width: 1200px;
   min-width: none;
+  margin: none;
 }
 
 .header {
-  padding-top: 60px;
+  padding: 60px 0 0 0;
+  margin: none;
   max-width: 1200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.logo-tasky {
-}
-
 
 .nav-list {
-  font-size: 20px;
+  font-size: 16px;
   list-style-type: none;
   display: flex;
-  margin: 0;
+  margin: none;
   padding: 0px 0px 0px 0px;
-  width: 220px;
-  justify-content: space-between;
+  width: 200px;
 }
 
 .button-login {
   text-decoration: none;
   background-color: #004eff;
-  color: white;
+  color: #ecf1f3;
   padding: 8px 15px;
   font-family: Gotham;
 }
