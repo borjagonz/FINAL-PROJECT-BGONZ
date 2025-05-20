@@ -1,11 +1,14 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <section id="header">
     <div class="header">
       <a href="index.html">
-        <img class="logo-tasky" src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png" alt="">
+        <img
+          class="logo-tasky"
+          src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png"
+          alt=""
+        />
       </a>
       <nav class="nav-buttons">
         <ul class="nav-list">
@@ -13,7 +16,7 @@
           <li><a class="button-register" href="">Register</a></li>
         </ul>
       </nav>
-  </div>
+    </div>
   </section>
 </template>
 
@@ -22,6 +25,7 @@ header {
   max-width: 1200px;
   min-width: none;
   margin: none;
+  padding: 0;
 }
 
 .header {
@@ -53,6 +57,7 @@ header {
 .button-login:hover {
   background-color: #51ca41;
   color: #ecf1f3;
+  transition: 0.3s;
 }
 
 .button-register {
@@ -68,6 +73,6 @@ header {
 .button-register:hover {
   background-color: #51ca41;
   color: #ecf1f3;
+  transition: 0.3s;
 }
-
 </style>

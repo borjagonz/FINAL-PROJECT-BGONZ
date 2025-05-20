@@ -2,6 +2,8 @@
 import HeaderComponent from './components/HeaderComponent.vue';
 import HeadlineComponent from './components/HeadlineComponent.vue';
 import HighlightsComponent from './components/HighlightsComponent.vue';
+import FooterComponent from './components/FooterComponent.vue'
+import NewsletterComponent from './components/NewsletterComponent.vue'
 </script>
 
 <template>
@@ -9,6 +11,8 @@ import HighlightsComponent from './components/HighlightsComponent.vue';
     <HeaderComponent />
     <HeadlineComponent />
     <HighlightsComponent />
+    <NewsletterComponent />
+    <FooterComponent />
   </section>
 </template>
 
