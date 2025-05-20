@@ -1,11 +1,12 @@
 <script setup>
 import HeaderComponent from './components/HeaderComponent.vue';
+import HeadlineComponent from './components/HeadlineComponent.vue';
 </script>
 
 <template>
   <section>
     <HeaderComponent />
-    <p>Hola</p>
+    <HeadlineComponent />
   </section>
 </template>
 
