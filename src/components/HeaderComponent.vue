@@ -3,10 +3,10 @@
 
 <template>
   <section>
-    <header>
-          <img src="" alt="Logo-Tasky">
-    </header>
+    <p>Hola</p>
   </section>
 </template>
 
-<style></style>
+<style scoped>
+
+</style>
