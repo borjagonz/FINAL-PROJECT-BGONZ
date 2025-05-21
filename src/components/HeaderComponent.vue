@@ -3,7 +3,7 @@
 <template>
   <section id="header">
     <div class="header">
-      <a href="index.html">
+      <a href="/">
         <img
           class="logo-tasky"
           src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png"
@@ -12,8 +12,8 @@
       </a>
       <nav class="nav-buttons">
         <ul class="nav-list">
-          <li><a class="button-login" href="">Log In</a></li>
-          <li><a class="button-register" href="">Register</a></li>
+          <li><a class="button-login" href="/Login">Log In</a></li>
+          <li><a class="button-register" href="/Register">Register</a></li>
         </ul>
       </nav>
     </div>
@@ -21,28 +21,23 @@
 </template>
 
 <style scoped>
-header {
-  max-width: 1200px;
-  min-width: none;
-  margin: none;
-  padding: 0;
-}
+
 
 .header {
   padding: 60px 0 0 0;
-  margin: none;
-  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  max-width: 1200px;
+  min-width: none;
 }
 
 .nav-list {
   font-size: 16px;
   list-style-type: none;
   display: flex;
-  margin: none;
-  padding: 0px 0px 0px 0px;
+  margin: 0;
+  padding: 0;
   width: 200px;
 }
 

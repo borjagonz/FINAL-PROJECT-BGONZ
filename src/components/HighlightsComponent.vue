@@ -65,6 +65,7 @@
 }
 
 .icon-highlights {
+  scale: 90%;
 }
 
 .h-card-title {

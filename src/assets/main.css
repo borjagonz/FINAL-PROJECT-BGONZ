@@ -8,10 +8,6 @@
 
 body {
   background-color: #ecf1f3;
-  background-image: url(https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/background/headline-background.png);
-  background-size: 200vh;
-  background-repeat: no-repeat;
-  background-position: auto;
 }
 
 @font-face {
@@ -23,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 64px;
   font-family: Gotham;
   color: #004eff;
   background-color: none;
@@ -31,7 +27,7 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-family: Gotham;
   color: #004eff;
   background-color: none;
@@ -39,7 +35,7 @@ h2 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   font-family: Gotham;
   color: #004eff;
 }

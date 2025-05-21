@@ -19,7 +19,7 @@
 
 .subtitle {
   padding-top: 20px;
-  max-width: 600px;
+  max-width: 500px;
   background-color: none;
   background: none;
 }

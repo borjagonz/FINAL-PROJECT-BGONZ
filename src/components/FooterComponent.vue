@@ -3,21 +3,23 @@
 <template>
   <section id="footer">
     <div class="footer">
-      <div>
-        <a href="index.html">
+      <div class="footer-container">
+        <div>
+          <a href="/">
           <img
             class="logo-tasky"
-            src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png"
+            src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo-white.png"
             alt=""
           />
-        </a>
-      </div>
-      <div class="links">
-        <ul class="ul-links">
-          <li><a class="il-link" href="">About Us</a></li>
-          <li><a class="il-link" href="">Privacy Policy</a></li>
-          <li><a class="il-link" href="">Contact</a></li>
-        </ul>
+          </a>
+        </div>
+        <div class="links">
+          <ul class="ul-links">
+            <li><a class="il-link" href="">About Us</a></li>
+            <li><a class="il-link" href="">Privacy Policy</a></li>
+            <li><a class="il-link" href="">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -25,10 +27,17 @@
 
 <style scoped>
 .footer {
-  display: flex;
   padding: 80px 0px;
   background-color: #004eff;
   margin-top: 120px;
+  align-items: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  min-width: none;
+  display: flex;
+  align-items: center;
 }
 
 .ul-links {
