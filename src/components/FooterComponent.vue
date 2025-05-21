@@ -6,11 +6,11 @@
       <div class="footer-container">
         <div>
           <a href="/">
-          <img
-            class="logo-tasky"
-            src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo-white.png"
-            alt=""
-          />
+            <img
+              class="logo-tasky"
+              src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo-white.png"
+              alt=""
+            />
           </a>
         </div>
         <div class="links">

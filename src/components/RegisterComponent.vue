@@ -85,6 +85,10 @@ input {
   font-family: Gotham;
 }
 
+::placeholder {
+  color: lightgray;
+}
+
 button {
   width: 100%;
   padding: 12px;

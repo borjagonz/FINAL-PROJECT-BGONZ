@@ -7,7 +7,7 @@ import NewsletterComponent from './NewsletterComponent.vue'
 </script>
 
 <template>
-  <section>
+  <section class="home">
     <HeaderComponent />
     <HeadlineComponent />
     <HighlightsComponent />
@@ -17,12 +17,10 @@ import NewsletterComponent from './NewsletterComponent.vue'
 </template>
 
 <style scoped>
-
-body{
+.home {
   background-image: url(https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/background/headline-background.png);
   background-size: 200vh;
   background-repeat: no-repeat;
   background-position: top;
 }
-
 </style>

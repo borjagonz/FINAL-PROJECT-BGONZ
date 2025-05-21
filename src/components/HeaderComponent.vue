@@ -21,8 +21,6 @@
 </template>
 
 <style scoped>
-
-
 .header {
   padding: 60px 0 0 0;
   margin: 0 auto;
