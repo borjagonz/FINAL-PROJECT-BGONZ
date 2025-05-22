@@ -138,7 +138,7 @@ button:hover {
 
 .login-text {
   font-size: 16px;
-  margin: 30px 0px;
+  margin: 25px 0px;
 }
 
 .login-link {

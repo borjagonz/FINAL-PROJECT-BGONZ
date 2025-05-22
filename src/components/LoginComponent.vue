@@ -95,7 +95,7 @@ input {
   padding: 10px;
   font-size: 16px;
   font-family: Gotham;
-  background-color: #004eff;
+  background-color: #457dff;
   border: 1px solid #ddd;
   color: #ecf1f3;
 }
@@ -153,7 +153,7 @@ button:hover {
 
 .register-text {
   font-size: 16px;
-  margin: 30px 0px;
+  margin: 25px 0px;
   color: #ecf1f3;
 }
 
