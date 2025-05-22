@@ -30,31 +30,33 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { supabase } from '@/supabase.js'
 
-const name = ref('')
+const router = useRouter()
+
 const email = ref('')
 const password = ref('')
 const error = ref('')
+const success = ref(false)
 
-const handleRegister = () => {
+const handleRegister = async () => {
   error.value = ''
+  success.value = false
 
-  if (name.value.trim().length < 2) {
-    error.value = 'Name must be at least 2 characters long'
-    return
+  const { error: signUpError } = await supabase.auth.signUp({
+    email: email.value,
+    password: password.value,
+  })
+
+  if (signUpError) {
+    error.value = signUpError.message
+  } else {
+    success.value = true
+    email.value = ''
+    password.value = ''
+    setTimeout(() => router.push('/login'), 2000)
   }
-
-  if (!email.value.includes('@')) {
-    error.value = 'Invalid email address'
-    return
-  }
-
-  if (password.value.length < 6) {
-    error.value = 'Password must be at least 6 characters long'
-    return
-  }
-
-  alert('Registration successful! You can now log in.')
 }
 </script>
 

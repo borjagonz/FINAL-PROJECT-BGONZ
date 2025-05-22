@@ -37,28 +37,26 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { supabase } from '@/supabase'
 
 const email = ref('')
 const password = ref('')
 const error = ref('')
+const router = useRouter()
 
-const handleLogin = () => {
+const handleLogin = async () => {
   error.value = ''
 
-  if (!email.value.includes('@')) {
-    error.value = 'Invalid email'
-    return
-  }
+  const { error: loginError } = await supabase.auth.signInWithPassword({
+    email: email.value,
+    password: password.value
+  })
 
-  if (password.value.length < 6) {
-    error.value = 'The password must be at least 6 characters long.'
-    return
-  }
-
-  if (email.value === 'user@example.com' && password.value === '123456') {
-    alert('Successful login')
+  if (loginError) {
+    error.value = loginError.message
   } else {
-    error.value = 'Incorrect email or password'
+    router.push('/dashboard')
   }
 }
 </script>

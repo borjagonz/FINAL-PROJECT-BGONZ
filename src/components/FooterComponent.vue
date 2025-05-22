@@ -6,11 +6,7 @@
       <div class="footer-container">
         <div>
           <a href="/">
-            <img
-              class="logo-tasky"
-              src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo-white.png"
-              alt=""
-            />
+            <img class="logo-tasky" src="/src/logo/logo-tasky-white.svg" alt="" />
           </a>
         </div>
         <div class="links">
@@ -38,6 +34,10 @@
   min-width: none;
   display: flex;
   align-items: center;
+}
+
+.logo-tasky {
+  width: 125px;
 }
 
 .ul-links {

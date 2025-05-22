@@ -4,11 +4,7 @@
   <section id="header">
     <div class="header">
       <a href="/">
-        <img
-          class="logo-tasky"
-          src="https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/logo/tasky-logo.png"
-          alt=""
-        />
+        <img class="logo-tasky" src="/src/logo/logo-tasky.svg" alt="Logo Tasky" />
       </a>
       <nav class="nav-buttons">
         <ul class="nav-list">
@@ -37,6 +33,10 @@
   margin: 0;
   padding: 0;
   width: 200px;
+}
+
+.logo-tasky {
+  width: 125px;
 }
 
 .button-login {

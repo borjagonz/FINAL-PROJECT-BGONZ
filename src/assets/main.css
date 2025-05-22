@@ -1,4 +1,6 @@
-*, html, body {
+*,
+html,
+body {
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
@@ -12,8 +14,9 @@ body {
 
 @font-face {
   font-family: 'Gotham Black';
-  src: url('/fonts/gotham-black.woff') format('woff'),
-       url('/fonts/gotham-black.woff2') format('woff2');
+  src:
+    url('/fonts/gotham-black.woff') format('woff'),
+    url('/fonts/gotham-black.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 36px;
   font-family: Gotham;
   color: #004eff;
   background-color: none;
