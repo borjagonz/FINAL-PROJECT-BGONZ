@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeComponent from '../components/HomeComponent.vue'
 import LoginComponent from '../components/LoginComponent.vue'
 import RegisterComponent from '../components/RegisterComponent.vue'
-import UserComponent from '../components/UserTaskComponent.vue'
 import DashboardComponent from '../components/DashboardComponent.vue'
 
 const routes = [
@@ -21,11 +20,6 @@ const routes = [
     path: '/Register',
     name: 'register',
     component: RegisterComponent,
-  },
-  {
-    path: '/User',
-    name: 'user',
-    component: UserComponent,
   },
   {
     path: '/dashboard',

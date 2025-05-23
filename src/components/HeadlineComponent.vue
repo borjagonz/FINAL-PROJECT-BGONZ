@@ -6,7 +6,9 @@
       <h1>Organize. Prioritize. Achieve.</h1>
     </div>
     <div class="subtitle">
-      <p>Your all-in-one task management solution designed for professionals who mean business.</p>
+      <p class="h-subtitle">
+        Your all-in-one task management solution designed for professionals who mean business.
+      </p>
     </div>
   </section>
 </template>
@@ -19,8 +21,12 @@
 
 .subtitle {
   padding-top: 20px;
-  max-width: 500px;
+  max-width: 720px;
   background-color: none;
   background: none;
+}
+
+.h-subtitle {
+  font-size: 28px;
 }
 </style>

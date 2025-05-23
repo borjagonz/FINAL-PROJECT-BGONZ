@@ -50,7 +50,7 @@ const handleLogin = async () => {
 
   const { error: loginError } = await supabase.auth.signInWithPassword({
     email: email.value,
-    password: password.value
+    password: password.value,
   })
 
   if (loginError) {
@@ -63,7 +63,8 @@ const handleLogin = async () => {
 
 <style scoped>
 .body {
-  background-color: #004eff;
+  background-image: url('../background/login-background-2.png');
+  background-size: cover;
   height: 100vh;
   margin: 0 auto;
   padding-top: 150px;
@@ -72,7 +73,7 @@ const handleLogin = async () => {
 .login-form {
   max-width: 400px;
   margin: auto;
-  border: 1px solid #ddd;
+  border: 1px solid #004eff;
   padding: 30px;
 }
 
@@ -93,13 +94,13 @@ input {
   padding: 10px;
   font-size: 16px;
   font-family: Gotham;
-  background-color: #457dff;
-  border: 1px solid #ddd;
+  background-color: transparent;
+  border: 1px solid #004eff;
   color: #ecf1f3;
 }
 
 ::placeholder {
-  color: lightgray;
+  color: #ecf1f3;
 }
 
 button {
@@ -107,8 +108,8 @@ button {
   padding: 12px;
   font-size: 18px;
   font-family: Gotham;
-  background-color: #ecf1f3;
-  color: #004eff;
+  background-color: #004eff;
+  color: #ecf1f3;
   border: none;
   cursor: pointer;
 }
@@ -135,9 +136,9 @@ button:hover {
   display: block;
   margin-top: 120px;
   padding: 12px;
-  background-color: #ecf1f3;
+  background-color: #004eff;
   width: 150px;
-  color: #004eff;
+  color: #ecf1f3;
   text-decoration: none;
   font-family: Gotham;
   text-align: center;

@@ -45,7 +45,6 @@
 .highlights {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   max-width: 1200px;
   padding: 200px 30px 0px 30px;
 }
@@ -55,7 +54,6 @@
   margin: 0;
   padding: 50px 30px;
   background-color: #004eff;
-  justify-content: center;
   text-align: center;
 }
 
@@ -65,13 +63,14 @@
 }
 
 .icon-highlights {
-  scale: 90%;
+  scale: 80%;
 }
 
 .h-card-title {
   color: #ecf1f3;
   max-width: 150px;
   padding-top: 30px;
+  font-size: 22px;
 }
 
 .h-card-text {

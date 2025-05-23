@@ -18,9 +18,9 @@ import NewsletterComponent from './NewsletterComponent.vue'
 
 <style scoped>
 .home {
-  background-image: url(https://raw.githubusercontent.com/borjagonz/FINAL-PROJECT-BGONZ/refs/heads/main/src/background/headline-background.png);
-  background-size: 200vh;
+  background-image: url('../background/home-background.png');
   background-repeat: no-repeat;
-  background-position: top;
+  background-size: cover;
+  background-position: center;
 }
 </style>

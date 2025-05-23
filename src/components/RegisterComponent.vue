@@ -1,31 +1,40 @@
 <template>
-  <div class="register-form">
-    <h2 class="signup">Sign Up</h2>
+  <section class="body">
+    <div class="register-form">
+      <h2 class="signup">Sign Up</h2>
 
-    <form @submit.prevent="handleRegister">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input id="name" type="text" v-model="name" required placeholder="Your full name" />
+      <form @submit.prevent="handleRegister">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" v-model="name" required placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" v-model="email" required placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" v-model="password" required minlength="6" />
+        </div>
+        <div v-if="error" class="error">{{ error }}</div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" type="password" v-model="confirmPassword" required minlength="6" />
+        </div>
+        <div v-if="confirmPassword" :class="{'match': passwordsMatch, 'no-match': !passwordsMatch}">
+          {{ passwordsMatch ? 'Passwords match' : 'Passwords do not match' }}
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <div class="actions">
+        <p class="login-text">Already have an account?</p>
+        <router-link to="/login" class="login-link">Log in here</router-link>
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input id="email" type="email" v-model="email" required placeholder="your@email.com" />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input id="password" type="password" v-model="password" required minlength="6" />
-      </div>
-      <div v-if="error" class="error">{{ error }}</div>
-      <button type="submit">Create Account</button>
-    </form>
-    <div class="actions">
-      <p class="login-text">Already have an account?</p>
-      <router-link to="/login" class="login-link">Log in here</router-link>
     </div>
-  </div>
-  <div>
-    <router-link to="/" class="back-home"> Back to Home </router-link>
-  </div>
+    <div>
+      <router-link to="/" class="back-home"> Back to Home </router-link>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -37,12 +46,18 @@ const router = useRouter()
 
 const email = ref('')
 const password = ref('')
+const confirmPassword = ref('')
 const error = ref('')
 const success = ref(false)
 
 const handleRegister = async () => {
   error.value = ''
   success.value = false
+
+  if (password.value !== confirmPassword.value) {
+    error.value = 'Passwords do not match'
+    return
+  }
 
   const { error: signUpError } = await supabase.auth.signUp({
     email: email.value,
@@ -55,17 +70,32 @@ const handleRegister = async () => {
     success.value = true
     email.value = ''
     password.value = ''
+    confirmPassword.value = ''
     setTimeout(() => router.push('/login'), 2000)
   }
 }
+
+import { computed } from 'vue'
+
+const passwordsMatch = computed(() => {
+  return confirmPassword.value === '' || password.value === confirmPassword.value
+})
+
 </script>
 
 <style scoped>
+.body {
+  background-image: url('../background/login-animated-background.gif');
+  background-size: cover;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
 .register-form {
   max-width: 400px;
   margin: auto;
-  margin-top: 120px;
-  border: 1px solid #ddd;
+  border: 1px solid #004eff;
   padding: 30px;
 }
 
@@ -85,6 +115,8 @@ input {
   padding: 10px;
   font-size: 16px;
   font-family: Gotham;
+  background-color: transparent;
+  border: 1px solid #004eff;
 }
 
 ::placeholder {
@@ -157,4 +189,19 @@ button:hover {
   color: #51ca41;
   transition: 0.3s;
 }
+
+.match {
+  font-family: Gotham;
+  color: #51ca41;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+.no-match {
+  font-family: Gotham;
+  color: red;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
 </style>

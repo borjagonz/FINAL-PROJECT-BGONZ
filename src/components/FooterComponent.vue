@@ -37,12 +37,13 @@
 }
 
 .logo-tasky {
-  width: 125px;
+  width: 100px;
 }
 
 .ul-links {
   display: flex;
   list-style-type: none;
+  justify-content: space-between;
 }
 
 .il-link {
@@ -50,9 +51,12 @@
   font-family: Gotham;
   display: flex;
   margin: none;
-  padding: 0px 0px 0px 0px;
-  width: 120px;
   color: #ecf1f3;
+  padding: 0px 20px;
   text-decoration: none;
+}
+
+.il-link:hover {
+  text-decoration: underline;
 }
 </style>
