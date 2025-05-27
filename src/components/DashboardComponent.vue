@@ -33,12 +33,15 @@
         <h3 class="tasks-title">Pending Tasks</h3>
         <ul class="task-list">
           <li v-for="task in pendingTasks" :key="task.id">
-            <input
-              class="check-btn"
-              type="checkbox"
-              :checked="task.is_done"
-              @change="toggleDone(task)"
-            />
+            <div class="finish-mark">
+              <p class="finished">Mark as done</p>
+              <input
+                class="check-btn"
+                type="checkbox"
+                :checked="task.is_done"
+                @change="toggleDone(task)"
+              />
+            </div>
 
             <input
               class="task-edit-input-title"
@@ -216,7 +219,8 @@ body {
   border: none;
   color: #004eff;
   height: 40px;
-  max-width: 320px;
+  max-width: 420px;
+  min-width: 320px;
 }
 
 ::placeholder {
@@ -232,15 +236,17 @@ body {
   color: #004eff;
   height: 40px;
   text-align: start;
-  max-width: 320px;
+  max-width: 420px;
+  min-width: 320px;
 }
 
 .task-edit-input-title {
   margin: 0;
-  padding: 6px;
+  padding: 10px;
   font-size: 16px;
   font-family: Gotham;
-  width: 320px;
+  max-width: 420px;
+  min-width: 320px;
   background-color: white;
   color: #004eff;
   border: none;
@@ -249,10 +255,11 @@ body {
 
 .task-edit-input-description {
   margin: 0;
-  padding: 6px;
+  padding: 10px;
   font-size: 16px;
   font-family: Gotham;
-  width: 320px;
+  max-width: 420px;
+  min-width: 320px;
   background-color: white;
   color: #004eff;
   border: none;
@@ -279,10 +286,32 @@ body {
   padding-bottom: 30px;
 }
 
+.finish-mark {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  background-color: #004eff;
+  height: 40px;
+  padding: 0px 12px;
+  color: #ecf1f3;
+  align-items: center;
+  margin: 0;
+}
+
+.finish-mark:hover {
+  background-color: #00e600;
+}
+
+.finished {
+  color: #ecf1f3;
+  font-size: 14px;
+}
+
 .pending-tasks {
   margin: 30px auto;
   padding: 30px;
   max-width: 1200px;
+  min-width: none;
   border: 2px solid #004eff;
 }
 
@@ -340,8 +369,11 @@ input[type='checkbox']:checked::after {
 .done {
   color: gray;
   font-family: Gotham;
-  padding: 0;
-  margin: 0px 80px;
+  padding: 0px 10px;
+  margin: 0;
+  background-color: white;
+  height: 40px;
+  align-content: center;
 }
 
 .done-tasks {
@@ -409,9 +441,17 @@ input[type='checkbox']:checked::after {
   color: #004eff;
 }
 
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+  .task-list li {
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .task-list li {
     flex-wrap: wrap;
   }
 }
+
+
 </style>

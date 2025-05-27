@@ -14,8 +14,8 @@ body {
 @font-face {
   font-family: 'Gotham Black';
   src:
-    url('/fonts/gotham-black.woff') format('woff'),
-    url('/fonts/gotham-black.woff2') format('woff2');
+    url(../font/Gotham\ Black.otf) format('woff'),
+    url(../font/Gotham\ Black.otf) format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -49,4 +49,3 @@ p {
   font-family: Gotham;
   color: #004eff;
 }
-
