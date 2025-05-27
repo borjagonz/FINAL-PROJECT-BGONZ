@@ -8,10 +8,10 @@
         <button class="logout-btn" @click="handleLogout">Log out</button>
       </nav>
     </div>
-
     <div class="dashboard">
       <h2>Your Dashboard</h2>
       <p class="d-text">Here you can add tasks, edit or mark them as done and delete them.</p>
+
       <div class="new-task-container">
         <form @submit.prevent="addTask" class="task-form">
           <input class="new-task" v-model="newTask" placeholder="New task title..." required />
@@ -24,7 +24,12 @@
           <button class="add-btn" type="submit">Add task</button>
         </form>
       </div>
-      <div class="pending-tasks">
+
+      <div v-if="pendingTasks.length + doneTasks.length === 0" class="no-tasks-message">
+        <p class="empty-tasks">No tasks yet. Start by adding one!</p>
+      </div>
+
+      <div class="pending-tasks" v-if="pendingTasks.length + doneTasks.length > 0">
         <h3 class="tasks-title">Pending Tasks</h3>
         <ul class="task-list">
           <li v-for="task in pendingTasks" :key="task.id">
@@ -54,7 +59,8 @@
           </li>
         </ul>
       </div>
-      <div class="completed-tasks">
+
+      <div class="completed-tasks" v-if="pendingTasks.length + doneTasks.length > 0">
         <h3 class="tasks-title">Completed Tasks</h3>
         <div class="done-task">
           <ul class="task-list">
@@ -68,25 +74,7 @@
         </div>
       </div>
     </div>
-
-    <section id="footer">
-      <div class="footer">
-        <div class="footer-container">
-          <div>
-            <a href="/dashboard">
-              <img class="logo-tasky" src="/src/logo/logo-tasky-white.svg" alt="Tasky Logo" />
-            </a>
-          </div>
-          <div class="links">
-            <ul class="ul-links">
-              <li><a class="il-link" href="#">About Us</a></li>
-              <li><a class="il-link" href="#">Privacy Policy</a></li>
-              <li><a class="il-link" href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FooterComponent />
   </section>
 </template>
 
@@ -96,6 +84,7 @@ import { useRouter } from 'vue-router'
 import { useTaskStore } from '../stores/task.js'
 import { storeToRefs } from 'pinia'
 import { supabase } from '@/supabase'
+import FooterComponent from './FooterComponent.vue'
 
 const router = useRouter()
 const newTask = ref('')
@@ -155,22 +144,23 @@ body {
 }
 
 .d-container {
-  background-image: url('../background/dashboard-background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #ecf1f3;
 }
 
 .header {
-  padding: 30px 0 0 0;
-  margin: 0 auto;
+  padding: 60px 0 0 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
 }
 
 .logo-tasky {
-  width: 100px;
+  width: 125px;
+}
+
+.logo-tasky:hover {
+  scale: 110%;
+  transition: 1s;
 }
 
 .logout-btn {
@@ -183,35 +173,39 @@ body {
 }
 
 .logout-btn:hover {
-  background-color: #51ca41;
+  background-color: #00e600;
   transition: 0.3s;
+  color: #004eff;
 }
 
 .dashboard {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-top: 80px;
+  margin-top: 30px;
+  padding: 60px 40px;
   text-align: center;
-  min-height: 60vh;
+  min-height: 50vh;
+  background-color: #ecf1f3;
 }
 
 .d-text {
-  padding: 30px 0px 60px 0px;
+  padding: 30px 0px 30px 0px;
 }
 
 .task-form {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0px 10px;
+  gap: 10px;
 }
 
 .new-task-container {
+  margin: 30px auto;
+  padding: 30px;
   max-width: 1200px;
-  min-width: none;
+  border: 2px solid #004eff;
   display: flex;
-  padding: 20px;
-  border: 1px solid #004eff;
+  justify-content: space-between;
 }
 
 .new-task {
@@ -219,9 +213,14 @@ body {
   font-size: 16px;
   font-family: Gotham;
   background-color: white;
-  border: 1px solid #004eff;
+  border: none;
   color: #004eff;
   height: 40px;
+  max-width: 320px;
+}
+
+::placeholder {
+  color: #bfd0d7;
 }
 
 .task-description {
@@ -229,33 +228,35 @@ body {
   font-size: 16px;
   font-family: Gotham;
   background-color: white;
-  border: 1px solid #004eff;
+  border: none;
   color: #004eff;
   height: 40px;
-  text-align: left;
   text-align: start;
+  max-width: 320px;
 }
 
 .task-edit-input-title {
-  margin: 0 10px;
+  margin: 0;
   padding: 6px;
   font-size: 16px;
   font-family: Gotham;
-  width: 30%;
-  background-color: transparent;
+  width: 320px;
+  background-color: white;
   color: #004eff;
-  border: 1px solid #004eff;
+  border: none;
+  height: 40px;
 }
 
 .task-edit-input-description {
-  margin: 0 10px;
+  margin: 0;
   padding: 6px;
   font-size: 16px;
   font-family: Gotham;
-  width: 60%;
-  background-color: transparent;
+  width: 320px;
+  background-color: white;
   color: #004eff;
-  border: 1px solid #004eff;
+  border: none;
+  height: 40px;
 }
 
 .add-btn {
@@ -269,7 +270,8 @@ body {
 }
 
 .add-btn:hover {
-  background-color: #51ca41;
+  background-color: #00e600;
+  color: #004eff;
   transition: 0.3s;
 }
 
@@ -281,29 +283,26 @@ body {
   margin: 30px auto;
   padding: 30px;
   max-width: 1200px;
-  min-width: none;
-  border: 1px solid #004eff;
+  border: 2px solid #004eff;
 }
 
 .completed-tasks {
   margin: 30px auto;
   padding: 30px;
   max-width: 1200px;
-  min-width: none;
-  border: 1px solid #004eff;
+  border: 2px solid #004eff;
 }
 
 .task-list {
   list-style: none;
   padding: 0;
-  max-width: 1200px;
-  margin: 0 auto 40px;
+  width: 100%;
 }
 
 .task-list li {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -312,15 +311,16 @@ input[type='checkbox'] {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 1px solid #004eff;
+  border: 2px solid #004eff;
   background-color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0;
 }
 
 input[type='checkbox']:checked {
-  background-color: #51ca41;
-  border-color: #51ca41;
+  background-color: #00e600;
+  border-color: #00e600;
 }
 
 input[type='checkbox']:checked::after {
@@ -330,12 +330,23 @@ input[type='checkbox']:checked::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+}
+
+.empty-tasks {
+  margin-bottom: 200px;
 }
 
 .done {
-  text-decoration: line-through;
   color: gray;
   font-family: Gotham;
+  padding: 0;
+  margin: 0px 80px;
+}
+
+.done-tasks {
+  margin: 0;
+  width: 100%;
 }
 
 .check-btn {
@@ -350,11 +361,14 @@ input[type='checkbox']:checked::after {
   border: none;
   cursor: pointer;
   height: 40px;
+  margin: 0;
 }
 
 .edit-save-btn:hover {
-  background-color: #51ca41;
+  background-color: #00e600;
+  color: #004eff;
   transition: 0.3s;
+  margin: 0;
 }
 
 .delete-btn {
@@ -365,24 +379,12 @@ input[type='checkbox']:checked::after {
   border: none;
   cursor: pointer;
   height: 40px;
+  margin: 0;
 }
 
 .delete-btn:hover {
   background-color: red;
   transition: 0.3s;
-}
-
-.footer {
-  padding: 80px 0;
-  background-color: #004eff;
-  margin-top: 120px;
-}
-
-.footer-container {
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .ul-links {
@@ -397,5 +399,19 @@ input[type='checkbox']:checked::after {
   color: #ecf1f3;
   margin-left: 20px;
   text-decoration: none;
+}
+
+.no-tasks-message {
+  text-align: center;
+  margin-top: 60px;
+  font-family: Gotham;
+  font-size: 18px;
+  color: #004eff;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .task-list li {
+    flex-wrap: wrap;
+  }
 }
 </style>

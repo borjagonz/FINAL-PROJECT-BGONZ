@@ -1,5 +1,8 @@
 <template>
   <section class="body">
+    <a href="/">
+      <img class="logo-tasky" src="/src/logo/logo-tasky-white.svg" alt="" />
+    </a>
     <div class="login-form">
       <h2 class="login">Log in</h2>
 
@@ -63,18 +66,30 @@ const handleLogin = async () => {
 
 <style scoped>
 .body {
-  background-image: url('../background/login-background-2.png');
+  background-image: url('../background/login-background-2D.png');
   background-size: cover;
+  background-position: top;
   height: 100vh;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 60px;
+  justify-items: center;
+}
+
+.logo-tasky{
+  width: 100px;
+}
+
+.logo-tasky:hover {
+  scale: 120%;
+  transition: 1s;
 }
 
 .login-form {
   max-width: 400px;
   margin: auto;
-  border: 1px solid #004eff;
+  border: 2px solid #004eff;
   padding: 30px;
+  margin-top: 90px;
 }
 
 .login {
@@ -91,16 +106,17 @@ const handleLogin = async () => {
 
 input {
   width: 100%;
+  margin-top: 5px;
   padding: 10px;
   font-size: 16px;
   font-family: Gotham;
-  background-color: transparent;
-  border: 1px solid #004eff;
-  color: #ecf1f3;
+  background-color: #ecf1f3;
+  border: none;
+  color: #004eff;
 }
 
 ::placeholder {
-  color: #ecf1f3;
+  color: #a3b6bd;
 }
 
 button {
@@ -115,9 +131,9 @@ button {
 }
 
 button:hover {
-  background-color: #51ca41;
-  color: #ecf1f3;
-  transition: 0.3s;
+  background-color: #00e600;
+  color: #004eff;
+  transition: 0.5s;
 }
 
 .error {
@@ -130,11 +146,14 @@ button:hover {
 .actions {
   margin-top: 10px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .back-home {
   display: block;
-  margin-top: 120px;
+  margin-top: 80px;
   padding: 12px;
   background-color: #004eff;
   width: 150px;
@@ -145,9 +164,9 @@ button:hover {
 }
 
 .back-home:hover {
-  background-color: #51ca41;
-  color: #ecf1f3;
-  transition: 0.3s;
+  background-color: #00e600;
+  color: #004eff;
+  transition: 0.5s;
 }
 
 .register-text {
@@ -160,14 +179,14 @@ button:hover {
   color: #ecf1f3;
   margin-left: 10px;
   padding: 8px 11px;
-  background-color: #51ca41;
+  background-color: #004eff;
   text-decoration: none;
   font-family: Gotham;
 }
 
 .register-link:hover {
-  background-color: white;
-  color: #51ca41;
-  transition: 0.3s;
+  background-color: #00e600;
+  color: #004eff;
+  transition: 0.5s;
 }
 </style>

@@ -18,9 +18,10 @@ import NewsletterComponent from './NewsletterComponent.vue'
 
 <style scoped>
 .home {
-  background-image: url('../background/home-background.png');
+  background-image: url('../background/home-background-2D.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-position: top;
 }
 </style>

@@ -1,5 +1,8 @@
 <template>
   <section class="body">
+    <a href="/">
+      <img class="logo-tasky" src="/src/logo/logo-tasky-white.svg" alt="" />
+    </a>
     <div class="register-form">
       <h2 class="signup">Sign Up</h2>
 
@@ -19,9 +22,15 @@
         <div v-if="error" class="error">{{ error }}</div>
         <div class="form-group">
           <label for="confirmPassword">Confirm Password</label>
-          <input id="confirmPassword" type="password" v-model="confirmPassword" required minlength="6" />
+          <input
+            id="confirmPassword"
+            type="password"
+            v-model="confirmPassword"
+            required
+            minlength="6"
+          />
         </div>
-        <div v-if="confirmPassword" :class="{'match': passwordsMatch, 'no-match': !passwordsMatch}">
+        <div v-if="confirmPassword" :class="{ match: passwordsMatch, 'no-match': !passwordsMatch }">
           {{ passwordsMatch ? 'Passwords match' : 'Passwords do not match' }}
         </div>
         <button type="submit">Create Account</button>
@@ -80,47 +89,61 @@ import { computed } from 'vue'
 const passwordsMatch = computed(() => {
   return confirmPassword.value === '' || password.value === confirmPassword.value
 })
-
 </script>
 
 <style scoped>
 .body {
-  background-image: url('../background/login-animated-background.gif');
+  background-image: url('../background/register-background-2B.png');
   background-size: cover;
+  background-position: top;
   height: 100vh;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 60px;
+  justify-items: center;
+}
+
+.logo-tasky{
+  width: 100px;
+}
+
+.logo-tasky:hover {
+  scale: 120%;
+  transition: 1s;
 }
 
 .register-form {
   max-width: 400px;
   margin: auto;
-  border: 1px solid #004eff;
+  border: 2px solid #004eff;
   padding: 30px;
+  margin-top: 50px;
 }
 
 .signup {
   font-size: 42px;
   text-align: center;
+  color: #ecf1f3;
 }
 
 .form-group {
   margin: 20px 0px;
   font-family: Gotham;
-  color: #004eff;
+  color: #ecf1f3;
 }
 
 input {
   width: 100%;
+  margin-top: 5px;
   padding: 10px;
   font-size: 16px;
   font-family: Gotham;
-  background-color: transparent;
-  border: 1px solid #004eff;
+  background-color: #ecf1f3;
+  border: none;
+  color: #004eff;
 }
 
 ::placeholder {
-  color: lightgray;
+  color: #a3b6bd;
 }
 
 button {
@@ -135,8 +158,8 @@ button {
 }
 
 button:hover {
-  background-color: #51ca41;
-  color: #ecf1f3;
+  background-color: #00e600;
+  color: #004eff;
   transition: 0.3s;
 }
 
@@ -149,12 +172,14 @@ button:hover {
 
 .actions {
   margin-top: 10px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .back-home {
   display: block;
-  margin-top: 68px;
+  margin-top: 50px;
   padding: 12px;
   background-color: #004eff;
   width: 150px;
@@ -165,43 +190,49 @@ button:hover {
 }
 
 .back-home:hover {
-  background-color: #51ca41;
-  color: #ecf1f3;
+  background-color: #00e600;
+  color: #004eff;
   transition: 0.3s;
 }
 
 .login-text {
   font-size: 16px;
-  margin: 25px 0px;
+  margin: 25px 0px 25px 0px;
+  color: #ecf1f3;
 }
 
 .login-link {
   color: #ecf1f3;
   margin-left: 10px;
   padding: 8px 11px;
-  background-color: #51ca41;
+  background-color: #004eff;
   text-decoration: none;
   font-family: Gotham;
 }
 
 .login-link:hover {
-  background-color: white;
-  color: #51ca41;
-  transition: 0.3s;
+  background-color: #00e600;
+  color: #004eff;
+  transition: 0.5s;
 }
 
 .match {
   font-family: Gotham;
-  color: #51ca41;
-  padding-bottom: 20px;
+  color: #004eff;
+  padding: 5px;
+  margin-bottom: 20px;
   font-size: 12px;
+  background-color: #00e600;
+  text-align: center;
 }
 
 .no-match {
   font-family: Gotham;
-  color: red;
-  padding-bottom: 20px;
+  color: #ecf1f3;
+  padding: 5px;
+  margin-bottom: 20px;
   font-size: 12px;
+  background-color: red;
+  text-align: center;
 }
-
 </style>

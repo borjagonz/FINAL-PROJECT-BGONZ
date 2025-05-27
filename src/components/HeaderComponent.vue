@@ -17,13 +17,13 @@
 </template>
 
 <style scoped>
+
+
 .header {
   padding: 60px 0 0 0;
-  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  min-width: none;
 }
 
 .nav-list {
@@ -39,6 +39,11 @@
   width: 125px;
 }
 
+.logo-tasky:hover {
+  scale: 110%;
+  transition: 1s;
+}
+
 .button-login {
   text-decoration: none;
   background-color: #004eff;
@@ -48,9 +53,9 @@
 }
 
 .button-login:hover {
-  background-color: #51ca41;
-  color: #ecf1f3;
-  transition: 0.3s;
+  background-color: #00e600;
+  color: #004eff;
+  transition: 0.5s;
 }
 
 .button-register {
@@ -64,8 +69,8 @@
 }
 
 .button-register:hover {
-  background-color: #51ca41;
-  color: #ecf1f3;
-  transition: 0.3s;
+  background-color: #00e600;
+  color: #004eff;
+  transition: 0.5s;
 }
 </style>

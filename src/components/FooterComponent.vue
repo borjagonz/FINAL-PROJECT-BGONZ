@@ -22,18 +22,23 @@
 </template>
 
 <style scoped>
+footer {
+  max-width: 1200px;
+  padding: 30;
+  margin: 0;
+}
+
 .footer {
-  padding: 80px 0px;
+  padding: 80px 30px;
   background-color: #004eff;
-  margin-top: 120px;
   align-items: center;
 }
 
 .footer-container {
-  max-width: 1200px;
   min-width: none;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo-tasky {
@@ -58,5 +63,12 @@
 
 .il-link:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }
 </style>

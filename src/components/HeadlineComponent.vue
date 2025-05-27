@@ -15,13 +15,13 @@
 
 <style scoped>
 .headline {
-  padding: 220px 30px 0px 30px;
+  padding: 250px 30px 0px 30px;
   text-align: center;
 }
 
 .subtitle {
-  padding-top: 20px;
-  max-width: 720px;
+  padding-top: 50px;
+  max-width: 750px;
   background-color: none;
   background: none;
 }

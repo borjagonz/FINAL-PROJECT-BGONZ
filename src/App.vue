@@ -1,22 +1,24 @@
 <script>
-   import router from './router/index.js'
+import router from './router/index.js'
 
-   export default {
-     setup() {
-       return {
-         router
-       }
-     }
-   }
+export default {
+  setup() {
+    return {
+      router,
+    }
+  },
+}
+
+
 </script>
 
-   <template>
-     <div id="app">
-       <main>
-         <router-view></router-view>
-       </main>
-     </div>
-   </template>
+<template>
+  <div id="app">
+    <main>
+      <router-view></router-view>
+    </main>
+  </div>
+</template>
 
 <style scoped>
 
