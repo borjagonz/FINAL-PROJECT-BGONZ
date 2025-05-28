@@ -102,7 +102,7 @@ const passwordsMatch = computed(() => {
   justify-items: center;
 }
 
-.logo-tasky{
+.logo-tasky {
   width: 100px;
 }
 
@@ -127,7 +127,7 @@ const passwordsMatch = computed(() => {
 
 .form-group {
   margin: 20px 0px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   color: #ecf1f3;
 }
 
@@ -136,7 +136,7 @@ input {
   margin-top: 5px;
   padding: 10px;
   font-size: 16px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   background-color: #ecf1f3;
   border: none;
   color: #004eff;
@@ -150,7 +150,7 @@ button {
   width: 100%;
   padding: 12px;
   font-size: 18px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   background-color: #004eff;
   color: white;
   border: none;
@@ -166,7 +166,7 @@ button:hover {
 .error {
   color: red;
   margin-bottom: 20px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   text-align: center;
 }
 
@@ -185,7 +185,7 @@ button:hover {
   width: 150px;
   color: #ecf1f3;
   text-decoration: none;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   text-align: center;
 }
 
@@ -207,7 +207,7 @@ button:hover {
   padding: 8px 11px;
   background-color: #004eff;
   text-decoration: none;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
 }
 
 .login-link:hover {
@@ -217,7 +217,7 @@ button:hover {
 }
 
 .match {
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   color: #004eff;
   padding: 5px;
   margin-bottom: 20px;
@@ -227,7 +227,7 @@ button:hover {
 }
 
 .no-match {
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   color: #ecf1f3;
   padding: 5px;
   margin-bottom: 20px;

@@ -170,7 +170,7 @@ body {
   background-color: #004eff;
   color: #ecf1f3;
   padding: 8px 15px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   border: none;
   cursor: pointer;
 }
@@ -214,7 +214,7 @@ body {
 .new-task {
   padding: 10px;
   font-size: 16px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   background-color: white;
   border: none;
   color: #004eff;
@@ -230,7 +230,7 @@ body {
 .task-description {
   padding: 10px;
   font-size: 16px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   background-color: white;
   border: none;
   color: #004eff;
@@ -244,7 +244,7 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 16px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   max-width: 420px;
   min-width: 320px;
   background-color: white;
@@ -257,7 +257,7 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 16px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   max-width: 420px;
   min-width: 320px;
   background-color: white;
@@ -270,7 +270,7 @@ body {
   background-color: #004eff;
   color: #ecf1f3;
   padding: 8px 15px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   border: none;
   cursor: pointer;
   height: 40px;
@@ -368,7 +368,7 @@ input[type='checkbox']:checked::after {
 
 .done {
   color: gray;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   padding: 0px 10px;
   margin: 0;
   background-color: white;
@@ -389,7 +389,7 @@ input[type='checkbox']:checked::after {
   background-color: #004eff;
   color: #ecf1f3;
   padding: 8px 15px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   border: none;
   cursor: pointer;
   height: 40px;
@@ -407,7 +407,7 @@ input[type='checkbox']:checked::after {
   background-color: #004eff;
   color: #ecf1f3;
   padding: 8px 15px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   border: none;
   cursor: pointer;
   height: 40px;
@@ -427,7 +427,7 @@ input[type='checkbox']:checked::after {
 
 .il-link {
   font-size: 14px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   color: #ecf1f3;
   margin-left: 20px;
   text-decoration: none;
@@ -436,7 +436,7 @@ input[type='checkbox']:checked::after {
 .no-tasks-message {
   text-align: center;
   margin-top: 60px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   font-size: 18px;
   color: #004eff;
 }

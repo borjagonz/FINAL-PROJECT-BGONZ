@@ -53,7 +53,7 @@ footer {
 
 .il-link {
   font-size: 14px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   display: flex;
   margin: none;
   color: #ecf1f3;

@@ -49,7 +49,7 @@
   background-color: #004eff;
   color: #ecf1f3;
   padding: 8px 15px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
 }
 
 .button-login:hover {
@@ -65,7 +65,7 @@
   padding: 8px 15px;
   stroke-width: 2px;
   stroke: blue;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
 }
 
 .button-register:hover {

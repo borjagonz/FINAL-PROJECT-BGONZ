@@ -79,7 +79,7 @@ onMounted(() => {
   border-width: 0px;
   text-align: center;
   font-size: 18px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
 }
 
 .register-claim {
@@ -96,7 +96,7 @@ onMounted(() => {
   color: #ecf1f3;
   border: none;
   padding: 20px 30px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
   text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ onMounted(() => {
   border: none;
   padding: 0;
   margin: 20px 10px;
-  font-family: Gotham;
+  font-family: 'Gotham Black';
 }
 
 .submit-button:hover {
