@@ -3,7 +3,7 @@
 <template>
   <section class="headline">
     <div class="title">
-      <h1>Organize. Prioritize. Achieve.</h1>
+      <h1>Work Smart. Achieve More.</h1>
     </div>
     <div class="subtitle">
       <p class="h-subtitle">

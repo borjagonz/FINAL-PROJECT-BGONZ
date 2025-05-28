@@ -8,8 +8,8 @@
       </a>
       <nav class="nav-buttons">
         <ul class="nav-list">
-          <li><a class="button-login" href="/Login">Log In</a></li>
-          <li><a class="button-register" href="/Register">Register</a></li>
+          <li><a class="button-login" href="/login">Log In</a></li>
+          <li><a class="button-register" href="/register">Register</a></li>
         </ul>
       </nav>
     </div>

@@ -29,7 +29,7 @@
 
       <div class="actions">
         <p class="register-text">Don't have an account?</p>
-        <router-link to="/Register" class="register-link"> Register here </router-link>
+        <router-link to="/register" class="register-link"> Register here </router-link>
       </div>
     </div>
     <div>

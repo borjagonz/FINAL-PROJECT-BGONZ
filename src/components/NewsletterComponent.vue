@@ -140,7 +140,7 @@ onMounted(() => {
   color: #ecf1f3;
   border: none;
   padding: 0;
-  margin: 20px;
+  margin: 20px 10px;
   font-family: Gotham;
 }
 
