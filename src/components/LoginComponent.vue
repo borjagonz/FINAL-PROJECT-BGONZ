@@ -75,7 +75,7 @@ const handleLogin = async () => {
   justify-items: center;
 }
 
-.logo-tasky{
+.logo-tasky {
   width: 100px;
 }
 
