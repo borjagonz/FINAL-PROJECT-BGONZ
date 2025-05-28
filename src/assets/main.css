@@ -13,11 +13,7 @@ body {
 
 @font-face {
   font-family: 'Gotham Black';
-  src:
-    url(https://github.com/borjagonz/FINAL-PROJECT-BGONZ/blob/main/src/font/Gotham%20Black.otf)
-      format('woff'),
-    url(https://github.com/borjagonz/FINAL-PROJECT-BGONZ/blob/main/src/font/Gotham%20Black.otf)
-      format('woff2');
+  src: url('../assets/fonts/GothamBlack.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
