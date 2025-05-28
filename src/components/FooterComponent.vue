@@ -71,4 +71,17 @@ footer {
     gap: 40px;
   }
 }
+
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .il-link {
+  font-size: 10px;
+  font-family: 'Gotham Black';
+  display: flex;
+  margin: none;
+  color: #ecf1f3;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+}
+
 </style>

@@ -2,8 +2,8 @@
 
 <template>
   <section class="headline">
-    <div class="title">
-      <h1>Work Smart. Achieve More.</h1>
+    <div>
+      <h1 class="title">Work Smart. Achieve More.</h1>
     </div>
     <div class="subtitle">
       <p class="h-subtitle">
@@ -29,4 +29,11 @@
 .h-subtitle {
   font-size: 28px;
 }
+
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .title{
+    font-size: 60px;
+  }
+}
+
 </style>

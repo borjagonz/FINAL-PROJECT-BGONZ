@@ -173,4 +173,11 @@ onMounted(() => {
   border: 2px solid #004eff;
   width: 300px;
 }
+
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .input-email{
+    max-width: 300px;
+  }
+}
+
 </style>
